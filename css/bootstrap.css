@@ -466,7 +466,7 @@ a:hover, a:focus {
  display: none;
 }
 [class*="span"].pull-right, .row-fluid [class*="span"].pull-right {
- float: none;
+ float: right;
 }
 .container {
 	margin-right: auto;
@@ -701,7 +701,7 @@ blockquote small:before {
 	content: '\2014 \00A0';
 }
 blockquote.pull-right {
-	float: none;
+	float: right;
 	padding-right: 0;
 	padding-left: 0;
 	border-right: 0;
@@ -2543,7 +2543,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	max-width: none;
 }
 .nav > .pull-right {
-	float: none;
+	float: right;
 }
 .nav-header {
 	display: block;
@@ -2995,7 +2995,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	margin: 0 10px 0 0;
 }
 .navbar .nav.pull-right {
-	float: none;
+	float: right;
 	margin-right: 0;
 }
 .navbar .nav > li {
@@ -4690,7 +4690,7 @@ button.close {
  padding-right: 10px;
 }
  .media .pull-left,  .media .pull-right {
- float: none;
+ float: right;
  display: block;
  margin-bottom: 10px;
 }
@@ -5465,7 +5465,7 @@ ul.work-images li div {
  border-bottom-color: #111111;
 }
  .navbar .nav-collapse .nav.pull-right {
- float: none;
+ float: right;
  margin-left: 0;
 }
  .nav-collapse,  .nav-collapse.collapse {
