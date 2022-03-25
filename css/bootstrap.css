@@ -702,9 +702,9 @@ blockquote small:before {
 }
 blockquote.pull-right {
 	float: right;
-	padding-right: 0;
+	padding-right: 15px;
 	padding-left: 0;
-	border-right: 0;
+	border-right: 5px solid #eeeeee;
 	border-left: 0;
 }
 blockquote.pull-right p, blockquote.pull-right small {
@@ -4690,7 +4690,7 @@ button.close {
  padding-right: 10px;
 }
  .media .pull-left,  .media .pull-right {
- float: right;
+ float: none;
  display: block;
  margin-bottom: 10px;
 }
@@ -5465,7 +5465,7 @@ ul.work-images li div {
  border-bottom-color: #111111;
 }
  .navbar .nav-collapse .nav.pull-right {
- float: right;
+ float: none;
  margin-left: 0;
 }
  .nav-collapse,  .nav-collapse.collapse {
