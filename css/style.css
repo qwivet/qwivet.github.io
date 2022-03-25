@@ -292,3 +292,8 @@ ul.work-images li img:hover {
 	height: 64px;
 	width: 64px;
 }
+.square
+{
+	width: 250px;
+	height: 250px;
+}
