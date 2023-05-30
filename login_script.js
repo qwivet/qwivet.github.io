@@ -23,5 +23,5 @@ document.getElementById('login-button').addEventListener('click', function() {
 });
 
 document.getElementById('return-button').addEventListener('click', function() {
-    window.location.href = 'file:///D:/Prog/1/TTV/front/main.html'; 
+    window.location.href = '/main.html'; 
 });
