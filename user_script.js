@@ -9,7 +9,7 @@ window.onload = function() {
     
     document.getElementById('user-title').innerText = 'User Page: ' + nickname;
     
-    fetch('http://localhost:5224/samples/user?name=' + encodeURIComponent(nickname) + '&password=' + encodeURIComponent(password), {
+    fetch('https://ttvapibothelper.azurewebsites.net/samples/user?name=' + encodeURIComponent(nickname) + '&password=' + encodeURIComponent(password), {
         method: 'GET'
     })
     .then(response => response.json())
@@ -26,7 +26,7 @@ window.onload = function() {
                 var sampleButton = document.createElement('button');
                 sampleButton.innerText = sample;
                 sampleButton.addEventListener('click', function() {
-                    fetch('http://localhost:5224/sample/user?name=' + encodeURIComponent(nickname) + '&password=' + encodeURIComponent(password) + '&chat=' + encodeURIComponent(chat) + '&sample=' + encodeURIComponent(sample), {
+                    fetch('https://ttvapibothelper.azurewebsites.net/sample/user?name=' + encodeURIComponent(nickname) + '&password=' + encodeURIComponent(password) + '&chat=' + encodeURIComponent(chat) + '&sample=' + encodeURIComponent(sample), {
                         method: 'GET'
                     })
                     .then(response => response.blob())

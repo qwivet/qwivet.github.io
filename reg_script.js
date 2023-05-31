@@ -21,7 +21,8 @@ document.getElementById('register-button').addEventListener('click', function() 
                 password: password
             })
         });
-    }
+        window.location.href = '/main.html'; 
+    } else {alert('Invalid nickname or password');}
 });
 
 });
