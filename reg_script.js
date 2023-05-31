@@ -6,12 +6,12 @@ document.getElementById('register-button').addEventListener('click', function() 
         alert("Nickname and password can't be empty!");
         return;
     }
-    fetch('http://localhost:5224/user/' + nickname, {
+    fetch('https://ttvapibothelper.azurewebsites.net/user/' + nickname, {
     method: 'GET'
 }).then(response => response.json())
 .then(data => {
     if (data === false) {
-        fetch('http://localhost:5224/user', {
+        fetch('https://ttvapibothelper.azurewebsites.net/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
