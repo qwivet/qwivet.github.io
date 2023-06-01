@@ -125,3 +125,49 @@ body {
 .foreground button:hover {
     background-color: #16a085;
 }
+.user-page {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-title {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 4px #1abc9c;
+}
+
+#sample-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sample-list p {
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+}
+
+#sample-list button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #1abc9c;
+    color: #ecf0f1;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+}
+
+#sample-list button:hover {
+    background-color: #16a085;
+}

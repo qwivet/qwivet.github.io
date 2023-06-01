@@ -15,7 +15,7 @@ document.getElementById('login-button').addEventListener('click', function() {
         if (data === 'true') {
             localStorage.setItem('nickname', nickname);
             localStorage.setItem('password', password);
-            window.location.href = '/user';
+            window.location.href = '/user.html';
         } else {
             alert('Invalid nickname or password');
         }
