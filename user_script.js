@@ -48,7 +48,7 @@ var deletePassword = document.getElementById('delete-password');
 
 deleteButton.addEventListener('click', function() {
     if (deletePassword.value === localStorage.getItem('password')) {
-        fetch('https://ttvapibothelper.azurewebsites.net/sample/user?name=' + encodeURIComponent(localStorage.getItem('nickname')) + '&password=' + encodeURIComponent(localStorage.getItem('password')), {
+        fetch('https://ttvapibothelper.azurewebsites.net/user/delete?name=' + encodeURIComponent(localStorage.getItem('nickname')) + '&password=' + encodeURIComponent(localStorage.getItem('password')), {
             method: 'DELETE'
         })
         .then(response => response.json())
