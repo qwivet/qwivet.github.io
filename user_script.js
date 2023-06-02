@@ -1,3 +1,5 @@
+var nickname = '';
+var password = '';
 window.onload = function() {
     var nickname = localStorage.getItem('nickname');
     var password = localStorage.getItem('password');
