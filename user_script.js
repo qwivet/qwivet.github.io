@@ -1,8 +1,8 @@
 var nickname = '';
 var password = '';
 window.onload = function() {
-    var nickname = localStorage.getItem('nickname');
-    var password = localStorage.getItem('password');
+    nickname = localStorage.getItem('nickname');
+    password = localStorage.getItem('password');
     
     if (!nickname || !password) {
         window.location.href = 'file:///D:/Prog/1/TTV/front/login.html'; // redirect to login if no nickname or password
