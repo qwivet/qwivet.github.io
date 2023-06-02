@@ -1,8 +1,7 @@
-var nickname = '';
-var password = '';
+
 window.onload = function() {
-    nickname = localStorage.getItem('nickname');
-    password = localStorage.getItem('password');
+    var nickname = localStorage.getItem('nickname');
+    var password = localStorage.getItem('password');
     
     if (!nickname || !password) {
         window.location.href = 'file:///D:/Prog/1/TTV/front/login.html'; // redirect to login if no nickname or password
@@ -42,27 +41,27 @@ window.onload = function() {
             }
         }
     });
-
-    var deleteButton = document.getElementById('delete-button');
-    var deletePassword = document.getElementById('delete-password');
-
-    deleteButton.addEventListener('click', function() {
-        if (deletePassword.value === password) {
-            fetch('https://ttvapibothelper.azurewebsites.net/sample/user?name=' + encodeURIComponent(nickname) + '&password=' + encodeURIComponent(password), {
-                method: 'DELETE'
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    localStorage.removeItem('nickname');
-                    localStorage.removeItem('password');
-                    window.location.href = 'main'; // redirect to login page after account deletion
-                } else {
-                    alert('Error deleting account');
-                }
-            });
-        } else {
-            alert('Invalid password. Please enter your correct password to delete account.');
-        }
-    });
 };
+
+var deleteButton = document.getElementById('delete-button');
+var deletePassword = document.getElementById('delete-password');
+
+deleteButton.addEventListener('click', function() {
+    if (deletePassword.value === localStorage.getItem('password')) {
+        fetch('https://ttvapibothelper.azurewebsites.net/sample/user?name=' + encodeURIComponent(localStorage.getItem('nickname')) + '&password=' + encodeURIComponent(localStorage.getItem('password')), {
+            method: 'DELETE'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                localStorage.removeItem('nickname');
+                localStorage.removeItem('password');
+                window.location.href = 'main'; // redirect to login page after account deletion
+            } else {
+                alert('Error deleting account');
+            }
+        });
+    } else {
+        alert('Invalid password. Please enter your correct password to delete account.');
+    }
+});
