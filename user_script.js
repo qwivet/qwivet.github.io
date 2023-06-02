@@ -42,27 +42,27 @@ window.onload = function() {
             }
         }
     });
+
+    var deleteButton = document.getElementById('delete-button');
+    var deletePassword = document.getElementById('delete-password');
+
+    deleteButton.addEventListener('click', function() {
+        if (deletePassword.value === password) {
+            fetch('https://ttvapibothelper.azurewebsites.net/sample/user?name=' + encodeURIComponent(nickname) + '&password=' + encodeURIComponent(password), {
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    localStorage.removeItem('nickname');
+                    localStorage.removeItem('password');
+                    window.location.href = 'main'; // redirect to login page after account deletion
+                } else {
+                    alert('Error deleting account');
+                }
+            });
+        } else {
+            alert('Invalid password. Please enter your correct password to delete account.');
+        }
+    });
 };
-
-var deleteButton = document.getElementById('delete-button');
-var deletePassword = document.getElementById('delete-password');
-
-deleteButton.addEventListener('click', function() {
-    if (deletePassword.value === password) {
-        fetch('https://ttvapibothelper.azurewebsites.net/sample/user?name=' + encodeURIComponent(nickname) + '&password=' + encodeURIComponent(password), {
-            method: 'DELETE'
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                localStorage.removeItem('nickname');
-                localStorage.removeItem('password');
-                window.location.href = 'main'; // redirect to login page after account deletion
-            } else {
-                alert('Error deleting account');
-            }
-        });
-    } else {
-        alert('Invalid password. Please enter your correct password to delete account.');
-    }
-});
